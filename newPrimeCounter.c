@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <errno.h>
+#include <sys/resource.h>
 
 #define MAX_THREADS 8
 #define STACK_SIZE (256 * 1024) // 256 KB per thread, 2MB memory usage.
@@ -13,20 +14,6 @@ typedef struct {
     pthread_mutex_t lock;
 } SharedData;
 
-// Old function
-// bool isPrime(int n) {
-//     if (n <= 1) {
-//         return false;
-//     }
-//     for (int i = 2; i * i <= n; i++) {
-//         if (n % i == 0) {
-//             return false;
-//         }
-//     }
-//     return true;
-// }
-
-// Improved function
 bool isPrime(int n) {
     if (n <= 1) {
         return false;
@@ -62,7 +49,6 @@ void* readAndCountPrimes(void* arg) {
             pthread_mutex_unlock(&data->lock);
         }
     }
-
     pthread_exit(NULL);
 }
 
@@ -97,9 +83,6 @@ int main() {
         pthread_join(threads[i], NULL);
     }
 
-    // Destroy thread attribute
-    pthread_attr_destroy(&attr);
-
     // End timing
     if (clock_gettime(CLOCK_MONOTONIC, &end_time) != 0) {
         perror("clock_gettime");
@@ -107,9 +90,14 @@ int main() {
     }
     double time_spent = (end_time.tv_sec - start_time.tv_sec) + (end_time.tv_nsec - start_time.tv_nsec) / 1e9;
 
+    
+
     printf("%d total primes.\n", shared_data.prime_count);
     printf("Time taken: %f seconds.\n", time_spent);
-
+    // Print RAM usage
+    // struct rusage usage;
+    // getrusage(RUSAGE_SELF, &usage);
+    // printf("Maximum resident set size (RAM usage): %ld KB\n", usage.ru_maxrss);
     // Clean up
     pthread_mutex_destroy(&shared_data.lock);
 
