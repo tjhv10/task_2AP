@@ -33,6 +33,8 @@
     ![Optimized Output](screenshots/optimized_output.png)
     ![Optimized Memory](screenshots/optimized_memory.png)
 
+   ### You can see that in the line "Maximum resident set size (kbytes)" indicates that the peak amount of memory used by the program, in terms of RAM, was  at most 1688 kilobytes (1.688 MB) which is less than 2MB.
+
 5. **Clean up**:
     ```sh
     make clean
