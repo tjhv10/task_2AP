@@ -9,10 +9,15 @@
 
 2. **useage
    The useage is like this:
+   
    ./randomGenerator <seed> <num_of numbers>.
+   
    F.ex randomGenerator 10 10 will give you ten numbers, generated with random seed “10”.
+   
    ./randomGenerator 10 10000000 | ./newPrimeCounter or ./randomGenerator 10 10000000 | ./PrimeCounter 
-   The output will be a single line indicating the total number of primes found in the generated stream of 10,000,000 random numbers, such as "X total primes" where X is the count of      primes detected.
+   The output will be a single line indicating the total number of primes found in the generated stream of 10,000,000 random numbers, such as "X total primes" where X is the count of
+   primes detected.
+   
    And another line indicating the time it took.
 
 
