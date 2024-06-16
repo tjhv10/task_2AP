@@ -7,7 +7,7 @@
     make
     ```
 
-2. **useage
+   # useage
    The useage is like this:
    
    ./randomGenerator <seed> <num_of numbers>.
@@ -21,7 +21,7 @@
    And another line indicating the time it took.
 
 
-4. ## Results
+2. ## Results
 
     ### Reference Prime Counter
     
