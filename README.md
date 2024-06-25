@@ -1,47 +1,46 @@
-# Prime Counter 
+# Prime Counter
 
 ## Instructions
 
 1. **Compile the programs**:
-    ```sh
-    make
-    ```
+
+   ```sh
+   make
+   ```
 
    # useage
+
    The useage is like this:
-   
-   ./randomGenerator <seed> <num_of numbers>.
-   
+
+   ./randomGenerator `<seed>` <num_of numbers>.
+
    F.ex randomGenerator 10 10 will give you ten numbers, generated with random seed “10”.
-   
-   ./randomGenerator 10 10000000 | ./newPrimeCounter or ./randomGenerator 10 10000000 | ./PrimeCounter 
+
+   ./randomGenerator 10 10000000 | ./newPrimeCounter or ./randomGenerator 10 10000000 | ./PrimeCounter
    The output will be a single line indicating the total number of primes found in the generated stream of 10,000,000 random numbers, such as "X total primes" where X is the count of
    primes detected.
-   
+
    And another line indicating the time it took.
-
-
 2. ## Results
 
-    ### Reference Prime Counter
-    
-    ![Reference Output](screenshots/Reference_Prime_Counter)
-    
-    ### Optimized Prime Counter
-    
-    ![Optimized Output](screenshots/Optimized_Prime_Counter)
+   ### Reference Prime Counter
+
+   ![Reference Output](screenshots/Reference_Prime_Counter.png)
+
+   ### Optimized Prime Counter
+
+   ![Optimized Output](screenshots/Optimized_Prime_Counter.png)
 
    ### Reference Prime Counter with thread
 
-   ![Optimized Output](screenshots/Reference_Prime_Counter_with_thread)
-
+   ![Optimized Output](screenshots/Reference_Prime_Counter_with_thread.png)
 
    ### You can see that in the line "Maximum resident set size (kbytes)" indicates that the peak amount of memory used by the program, in terms of RAM, was  at most 1688 kilobytes (1.688 MB) which is less than 2MB.
+3. **Clean up**:
 
-5. **Clean up**:
-    ```sh
-    make clean
-    ```
+   ```sh
+   make clean
+   ```
 
 ## Explanation
 
