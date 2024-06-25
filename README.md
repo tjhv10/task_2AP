@@ -29,11 +29,11 @@
     
     ### Optimized Prime Counter
     
-    ![Optimized Output](screenshots/Optimized_Prime_Counter.png)
+    ![Optimized Output](screenshots/Optimized_Prime_Counter)
 
    ### Reference Prime Counter with thread
 
-   ![Optimized Output](screenshots/Reference_Prime_Counter_with_thread.png)
+   ![Optimized Output](screenshots/Reference_Prime_Counter_with_thread)
 
 
    ### You can see that in the line "Maximum resident set size (kbytes)" indicates that the peak amount of memory used by the program, in terms of RAM, was  at most 1688 kilobytes (1.688 MB) which is less than 2MB.
