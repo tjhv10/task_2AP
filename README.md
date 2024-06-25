@@ -25,7 +25,7 @@
 
     ### Reference Prime Counter
     
-    ![Reference Output](screenshots/Reference_Prime_Counter.png)
+    ![Reference Output](screenshots/Reference_Prime_Counter)
     
     ### Optimized Prime Counter
     
